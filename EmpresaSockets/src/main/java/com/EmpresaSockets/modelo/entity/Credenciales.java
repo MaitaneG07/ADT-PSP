@@ -27,6 +27,4 @@ public class Credenciales {
     @OneToOne
     @JoinColumn(name = "empleado_id", unique = true)
     private Empleado empleado;
-
-    // Getters y setters
 }
