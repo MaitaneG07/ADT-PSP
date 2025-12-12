@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Configuración de conexión -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eltiempo?</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password" />
+		
+		<!-- Dialecto para MySQL -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Mostrar el SQL generado -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!-- Actualizar el esquema automáticamente -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- 
+			hibernate.hbm2ddl.auto puede ser:
+				create → crea la BD desde cero cada vez que arrancas la App
+						a partir de las entidades. 
+				update → actualiza las tablas, si hay cambios. 
+				none → no toca la BD nunca hagas lo que hagas. 
+		-->
+
+		<!--  Registrar las entidades  -->
+		<mapping class="ProyectoMeteorologico.modelo.entity.Provincia"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.MunicipiosEspaciosNatId"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.MunicipiosEspaciosNat"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.Municipio"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.MedicionesCentroMetId"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.MedicionesCentroMet"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.EspaciosNaturales"/>
+		<mapping class="ProyectoMeteorologico.modelo.entity.CentroMeteorologico"/>
+	</session-factory>
+</hibernate-configuration>
