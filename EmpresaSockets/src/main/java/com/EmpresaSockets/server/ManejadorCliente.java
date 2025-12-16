@@ -3,6 +3,8 @@ package com.EmpresaSockets.server;
 import java.io.*;
 import java.net.Socket;
 
+import com.EmpresaSockets.modelo.vista.ProcesadorPeticion;
+
 public class ManejadorCliente implements Runnable {
     private Socket socket;
 

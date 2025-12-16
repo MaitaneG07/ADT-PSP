@@ -36,6 +36,4 @@ public class Empleado {
 
     @OneToOne(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
     private Credenciales credenciales;
-
-    // Getters y setters
 }
